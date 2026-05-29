@@ -788,10 +788,20 @@ body.light-theme .terminal-output.system-info {
     transition: all var(--transition-fast);
 }
 
-/* Lane Specific node colors */
+/* Time Vector Animation */
+.time-vector-line {
+    animation: scroll-up 1.5s linear infinite;
+}
+
+@keyframes scroll-up {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: 16; }
+}
+
+/* Centralize nodes onto the time vector */
 .git-commit-card[data-branch="collaboration"]::before { border-color: var(--accent-blue); left: -80px; }
-.git-commit-card[data-branch="main"]::before { border-color: var(--accent-teal); left: -120px; }
-.git-commit-card[data-branch="work"]::before { border-color: var(--accent-purple); left: -40px; }
+.git-commit-card[data-branch="main"]::before { border-color: var(--accent-teal); left: -80px; }
+.git-commit-card[data-branch="work"]::before { border-color: var(--accent-purple); left: -80px; }
 
 .git-commit-card:hover::before {
     transform: scale(1.5);

@@ -109,7 +109,7 @@ function initTypewriter() {
         "AI Researcher",
         "Deep Learning Scientist",
         "Computer Scientist",
-        "Medical Signal/Image Expert",
+        "AI Medical Signal/Image Analyst",
         "LLM & Generative AI Specialist"
     ];
     
