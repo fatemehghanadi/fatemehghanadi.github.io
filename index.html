@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fatemehsadat Ghanadi Ladani, M.Sc. - Portfolio website. AI Researcher and Deep Learning Engineer specializing in Machine Learning, LLMs, Medical Signal/Image Processing, and Explainable AI.">
+    <title>Fatemehsadat Ghanadi Ladani | AI Researcher & Engineer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Core Style -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    
+    <!-- Interactive Background Canvas -->
+    <canvas id="network-canvas"></canvas>
+    
+    <!-- Background Glow Blobs -->
+    <div class="glow-blob blob-1"></div>
+    <div class="glow-blob blob-2"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>FGL<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-links" id="nav-menu">
+                <a href="#about" class="nav-link active">About</a>
+                <a href="#timeline" class="nav-link">Git History</a>
+                <a href="#publications" class="nav-link">Research</a>
+                <a href="#projects" class="nav-link">IDE Workspace</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle visual theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="mobile-nav-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-container">
+                        <span class="hero-badge"><span class="pulse-dot"></span> AI Specialist & AI Researcher</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Fatemehsadat <br>
+                        <span class="gradient-text">Ghanadi Ladani</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        <span id="typed-text"></span><span class="typed-cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        AI Researcher & Computer Scientist based in Odense, Denmark. Specializing in Artificial intelligence and machine learning.
+                    </p>
+                    
+                    <!-- Real Social & Contact Links -->
+                    <div class="social-links">
+                        <a href="https://github.com/fatemehghanadi" target="_blank" rel="noopener" class="social-icon" title="GitHub" id="github-link">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/fatemeh-ghanadi" target="_blank" rel="noopener" class="social-icon" title="LinkedIn" id="linkedin-link">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=MYXUk2oAAAAJ&hl=en" target="_blank" rel="noopener" class="social-icon" title="Google Scholar" id="scholar-link">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://www.researchgate.net/profile/Fatemehsadat-Ghanadi-Ladani" target="_blank" rel="noopener" class="social-icon" title="ResearchGate" id="researchgate-link">
+                            <i class="fa-brands fa-researchgate"></i>
+                        </a>
+                        <a href="mailto:fladani@health.sdu.dk" class="social-icon" title="Email"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="#publications" class="btn btn-primary">
+                            <i class="fa-solid fa-terminal"></i>
+                            <span>Explore Publications</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>Get In Touch</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Interactive CS Terminal Widget -->
+                <div class="hero-visual">
+                    <div class="terminal-window glass-panel">
+                        <div class="terminal-header">
+                            <div class="terminal-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control expand"></span>
+                            </div>
+                            <div class="terminal-title">fgl@admissions: ~ (bash)</div>
+                            <div class="terminal-icon"><i class="fa-solid fa-terminal"></i></div>
+                        </div>
+                        <div class="terminal-body">
+                            <div id="terminal-history">
+                                <div class="terminal-line"><span class="terminal-accent">$</span> fgl --boot-diagnostics</div>
+                                <div class="terminal-output system-info">
+                                    <span>[OK] Loading neural networks...</span><br>
+                                    <span>[OK] Core profile v1.0.0 resolved successfully.</span><br>
+                                    <span>[OK] Port 8080 active. Welcome, guest user!</span>
+                                </div>
+                                <div class="terminal-output welcome-message">
+                                    ====================================================<br>
+                                    Fatemehsadat Ghanadi Ladani | AI & Robotics Researcher<br>
+                                    Odense, Denmark | fladani@health.sdu.dk<br>
+                                    ====================================================<br>
+                                    Type <span class="text-accent">'help'</span> to explore interactive CS terminal commands.
+                                </div>
+                            </div>
+                            <div class="terminal-input-line">
+                                <span class="terminal-accent">fgl@portfolio:~$</span>
+                                <span id="terminal-input-buffer"></span>
+                                <span class="terminal-cursor"></span>
+                                <input type="text" id="terminal-hidden-input" autocomplete="off" autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll to About Me">
+                    <span class="mouse">
+                        <span class="wheel"></span>
+                    </span>
+                    <span class="arrow"></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About & Core Research Interests -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Introduction</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-text-column">
+                        <h3>Pioneering Intelligent Architectures</h3>
+                        <p>
+                            I am a passionate AI Researcher and Engineer with a strong background in AI, including work on large language models and medical data processing. I am currently a Research Assistant at the University of Southern Denmark (SDU). My focus is on developing advanced AI solutions for healthcare and other domains.
+                        </p>
+                        <p>
+                            Over the course of my academic and industry collaborations, I have designed pipelines for neurodegenerative classification (such as Autism Spectrum Disorder and Alzheimer's disease), engineered robust LLM pipelines integrating RAG and agentic workflows, and collaborated on sustainability data sciences. I thrive on developing optimized, explainable, and clean codebases that translate complex mathematical models into real-world applications.
+                        </p>
+                    </div>
+                    
+                    <div class="interests-column">
+                        <h3>Core Research Fields</h3>
+                        <div class="interests-grid">
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fa-solid fa-brain"></i>
+                                </div>
+                                <h4>ML & Deep Learning</h4>
+                                <p>Architecting neural networks (DANNs, GNNs) for advanced pattern recognition.</p>
+                            </div>
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fa-solid fa-comments"></i>
+                                </div>
+                                <h4>Generative AI & LLMs</h4>
+                                <p>Building end-to-end LLM fine-tuning pipelines, agentic RAG and FastAPI backends.</p>
+                            </div>
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fa-solid fa-wave-square"></i>
+                                </div>
+                                    <h4>Medical Image and Signal Processing</h4>
+                                <p>Decomposing complex biological series (fMRI, MRI, X-rays) for early disease detection.</p>
+                            </div>
+                            <div class="interest-card">
+                                <div class="interest-icon">
+                                    <i class="fa-solid fa-eye"></i>
+                                </div>
+                                <h4>Explainable AI (XAI)</h4>
+                                <p>Formulating highly interpretable diagnostics that physicians and stakeholders can trust.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Git Branch Timeline Section -->
+        <section id="timeline" class="section-padding bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Version History of my Career</span>
+                    <h2 class="section-title">Git Commit History</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="git-timeline-wrapper solar-system-timeline">
+                    <!-- The Orbital Lanes -->
+                    <div class="git-lanes">
+                        <svg class="git-svg-graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 1600" preserveAspectRatio="none">
+                            <!-- Orbit Lane 1 (Main) - sinusoidal wave -->
+                            <path class="orbit-path orbit-main" d="M 20,0 C 5,160 35,320 20,480 C 5,640 35,800 20,960 C 5,1120 35,1280 20,1440 L 20,1600" stroke="var(--accent-teal)" stroke-width="2" fill="none" opacity="0.35" />
+                            <!-- Orbit Lane 2 (Collaboration) -->
+                            <path class="orbit-path orbit-collab" d="M 60,0 C 40,160 80,320 60,480 C 40,640 80,800 60,960 C 40,1120 80,1280 60,1440 L 60,1600" stroke="var(--accent-blue)" stroke-width="2" fill="none" opacity="0.35" />
+                            <!-- Orbit Lane 3 (Work) -->
+                            <path class="orbit-path orbit-work" d="M 100,0 C 75,160 125,320 100,480 C 75,640 125,800 100,960 C 75,1120 125,1280 100,1440 L 100,1600" stroke="var(--accent-purple)" stroke-width="2" fill="none" opacity="0.35" />
+
+                            <!-- Small decorative stars scattered -->
+                            <circle cx="15" cy="50" r="1" fill="#fff" opacity="0.5"/>
+                            <circle cx="85" cy="120" r="1.2" fill="#fff" opacity="0.4"/>
+                            <circle cx="45" cy="300" r="0.8" fill="#fff" opacity="0.6"/>
+                            <circle cx="110" cy="450" r="1" fill="#fff" opacity="0.3"/>
+                            <circle cx="30" cy="600" r="1.3" fill="#fff" opacity="0.5"/>
+                            <circle cx="90" cy="750" r="0.9" fill="#fff" opacity="0.4"/>
+                            <circle cx="10" cy="900" r="1.1" fill="#fff" opacity="0.5"/>
+                            <circle cx="70" cy="1050" r="1" fill="#fff" opacity="0.3"/>
+                            <circle cx="50" cy="1200" r="1.2" fill="#fff" opacity="0.4"/>
+                            <circle cx="105" cy="1350" r="0.8" fill="#fff" opacity="0.6"/>
+                        </svg>
+                    </div>
+
+                    <!-- Timeline commit nodes container -->
+                    <div class="git-commits-list">
+                        
+                        <!-- Commit 0 - Earth -->
+                        <div class="git-commit-card glass-panel" data-branch="collaboration" data-planet="earth">
+                            <div class="planet-bg">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="#2980b9" opacity="0.35"/>
+                                    <!-- Continents -->
+                                    <path d="M25,35 Q40,15 60,25 Q80,35 65,55 Q50,75 35,65 Q10,50 25,35Z" fill="#27ae60" opacity="0.3"/>
+                                    <path d="M60,70 Q75,60 85,75 Q90,90 70,85 Q50,80 60,70Z" fill="#27ae60" opacity="0.3"/>
+                                    <path d="M15,60 Q30,50 35,70 Q25,85 10,75 Q0,65 15,60Z" fill="#27ae60" opacity="0.3"/>
+                                    <!-- Clouds -->
+                                    <path d="M20,25 Q35,20 40,30 Q45,40 30,40 Q15,40 20,25Z" fill="#ecf0f1" opacity="0.25"/>
+                                    <path d="M55,55 Q70,50 75,60 Q80,70 65,70 Q50,70 55,55Z" fill="#ecf0f1" opacity="0.25"/>
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#3498db" stroke-width="1.5" opacity="0.4"/>
+                                </svg>
+                            </div>
+                            <div class="commit-badge-row">
+                                <span class="commit-hash"><i class="fa-solid fa-code-commit"></i> commit c99a3b2</span>
+                                <span class="commit-branch-tag tag-collab">branch: collaboration</span>
+                            </div>
+                            <div class="commit-details">
+                                <span class="commit-author">Author: Fatemeh</span>
+                                <span class="commit-date">Date: June 2026</span>
+                            </div>
+                            <h3 class="commit-title">Research Assistant – AI to Strengthen Transparency and Reproducibility in Real-World Evidence Generation</h3>
+                            <p class="commit-message">
+                            </p>
+                        </div>
+
+                        <!-- Commit 1 - Moon -->
+                        <div class="git-commit-card glass-panel" data-branch="collaboration" data-planet="moon">
+                            <div class="planet-bg">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="#bdc3c7" opacity="0.3"/>
+                                    <!-- Craters -->
+                                    <circle cx="35" cy="35" r="8" fill="#7f8c8d" opacity="0.25"/>
+                                    <circle cx="65" cy="45" r="12" fill="#7f8c8d" opacity="0.2"/>
+                                    <circle cx="45" cy="70" r="9" fill="#7f8c8d" opacity="0.25"/>
+                                    <circle cx="75" cy="25" r="5" fill="#7f8c8d" opacity="0.2"/>
+                                    <circle cx="25" cy="65" r="6" fill="#7f8c8d" opacity="0.25"/>
+                                    <circle cx="55" cy="20" r="4" fill="#7f8c8d" opacity="0.2"/>
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#95a5a6" stroke-width="1.5" opacity="0.4"/>
+                                </svg>
+                            </div>
+                            <div class="commit-badge-row">
+                                <span class="commit-hash"><i class="fa-solid fa-code-commit"></i> commit b58f4a1</span>
+                                <span class="commit-branch-tag tag-collab">branch: collaboration</span>
+                            </div>
+                            <div class="commit-details">
+                                <span class="commit-author">Author: Fatemeh</span>
+                                <span class="commit-date">Date: Sep 2025 - Feb 2026</span>
+                            </div>
+                            <h3 class="commit-title">Research Collaboration with Institute of Green Technology, SDU</h3>
+                            <p class="commit-message">
+                                Delivered advanced sustainability data science initiatives. Architected modular life cycle pipelines assessing environmental metrics and modeling structural variables.
+                            </p>
+                        </div>
+                        
+                        <!-- Commit 2 - Mars -->
+                        <div class="git-commit-card glass-panel" data-branch="main" data-planet="mars">
+                            <div class="planet-bg">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="#d35400" opacity="0.4"/>
+                                    <!-- Surface Details -->
+                                    <path d="M20,45 Q40,30 60,40 Q80,50 70,70 Q50,60 30,65 Q10,70 20,45Z" fill="#a04000" opacity="0.35"/>
+                                    <path d="M50,20 Q65,15 80,30 Q85,45 75,55 Q60,45 50,20Z" fill="#a04000" opacity="0.3"/>
+                                    <!-- Polar Ice Cap -->
+                                    <path d="M35,12 Q50,18 65,12 Q60,6 40,6 Z" fill="#ecf0f1" opacity="0.6"/>
+                                    <!-- Craters -->
+                                    <circle cx="35" cy="55" r="4" fill="#873600" opacity="0.3"/>
+                                    <circle cx="65" cy="35" r="6" fill="#873600" opacity="0.3"/>
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#e67e22" stroke-width="1.5" opacity="0.5"/>
+                                </svg>
+                            </div>
+                            <div class="commit-badge-row">
+                                <span class="commit-hash"><i class="fa-solid fa-code-commit"></i> commit d2ef7a2</span>
+                                <span class="commit-branch-tag tag-main">branch: main</span>
+                            </div>
+                            <div class="commit-details">
+                                <span class="commit-author">Author: Fatemeh</span>
+                                <span class="commit-date">Date: Sep 2022 - Jan 2025</span>
+                            </div>
+                            <h3 class="commit-title">Completed M.Sc. in Artificial Intelligence</h3>
+                            <p class="commit-message">
+                                Developed CNN, GNN and transformer based models.
+                            </p>
+                            <ul class="commit-attributes">
+                                <li><strong>Thesis:</strong> Autism Spectrum Disorder Identification Based on Machine Learning</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Commit 3 - Saturn -->
+                        <div class="git-commit-card glass-panel" data-branch="work" data-planet="saturn">
+                            <div class="planet-bg">
+                                <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="60" cy="50" r="35" fill="#f0c75e" opacity="0.10"/>
+                                    <ellipse cx="60" cy="35" rx="30" ry="3" fill="#d4a84b" opacity="0.08"/>
+                                    <ellipse cx="60" cy="50" rx="32" ry="3" fill="#c99b3f" opacity="0.07"/>
+                                    <ellipse cx="60" cy="62" rx="28" ry="3" fill="#d4a84b" opacity="0.06"/>
+                                    <!-- Ring -->
+                                    <ellipse cx="60" cy="50" rx="55" ry="12" fill="none" stroke="#f0c75e" stroke-width="2" opacity="0.15" transform="rotate(-15 60 50)"/>
+                                    <ellipse cx="60" cy="50" rx="50" ry="10" fill="none" stroke="#d4a84b" stroke-width="1.5" opacity="0.10" transform="rotate(-15 60 50)"/>
+                                </svg>
+                            </div>
+                            <div class="commit-badge-row">
+                                <span class="commit-hash"><i class="fa-solid fa-code-commit"></i> commit e61b2a9</span>
+                                <span class="commit-branch-tag tag-work">branch: industry-intern</span>
+                            </div>
+                            <div class="commit-details">
+                                <span class="commit-author">Author: Fatemeh</span>
+                                <span class="commit-date">Date: May 2021 - Dec 2021</span>
+                            </div>
+                            <h3 class="commit-title">AI Engineer Intern &amp; Developer</h3>
+                            <p class="commit-message">
+                                Engaged in healthcare-focused AI software engineering. Optimized convolutional networks and structured deep learning codebases for clinical diagnostic support.
+                            </p>
+                        </div>
+                        
+                        <!-- Commit 4 - Uranus -->
+                        <div class="git-commit-card glass-panel" data-branch="main" data-planet="uranus">
+                            <div class="planet-bg">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="45" fill="#5dade2" opacity="0.10"/>
+                                    <circle cx="50" cy="50" r="40" fill="#85c1e9" opacity="0.06"/>
+                                    <!-- Vertical ring (Uranus has a tilted ring) -->
+                                    <ellipse cx="50" cy="50" rx="10" ry="48" fill="none" stroke="#85c1e9" stroke-width="1.5" opacity="0.15" transform="rotate(10 50 50)"/>
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#5dade2" stroke-width="1" opacity="0.2"/>
+                                </svg>
+                            </div>
+                            <div class="commit-badge-row">
+                                <span class="commit-hash"><i class="fa-solid fa-code-commit"></i> commit a18e3d5</span>
+                                <span class="commit-branch-tag tag-main">branch: main</span>
+                            </div>
+                            <div class="commit-details">
+                                <span class="commit-author">Author: Fatemeh</span>
+                                <span class="commit-date">Date: Sep 2017 - Sep 2022</span>
+                            </div>
+                            <h3 class="commit-title">Completed B.Sc. in Computer Engineering</h3>
+                            <p class="commit-message">
+                                Developed core software engineering principles and computer science paradigms.
+                            </p>
+                            <ul class="commit-attributes">
+                                <li><strong>Thesis:</strong> Alzheimer's Disease Detection Using Machine Learning Techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Research & Papers -->
+        <section id="publications" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Academic Contributions</span>
+                    <h2 class="section-title">Research & Publications</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <!-- Research Filter Controls -->
+                <div class="filter-wrapper">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="paper-search" placeholder="Search papers by keyword (e.g., Autism, fMRI)...">
+                    </div>
+                    <div class="filter-buttons" id="paper-filters">
+                        <button class="filter-btn active" data-filter="all">All Contributions</button>
+                        <button class="filter-btn" data-filter="published">Published</button>
+                        <button class="filter-btn" data-filter="submitted">Submitted</button>
+                    </div>
+                </div>
+                
+                <!-- Publications Grid/List -->
+                <div class="publications-list" id="papers-container">
+                    
+                    <!-- Paper 1 -->
+                    <div class="paper-card glass-panel" data-type="published" data-keywords="fmri autism neural network embc">
+                        <div class="paper-meta">
+                            <span class="pub-badge conference">EMBC 2025</span>
+                            <span class="paper-year">2025</span>
+                        </div>
+                        <h3 class="paper-title">
+                            Using fMRI Time Series and Functional Connectivity for Autism Classification: Integrating Neural Networks
+                        </h3>
+                        <p class="paper-authors">
+                            <strong>F. G. Ladani</strong>, N. Karimi, B. Mirmahboub, Z Sobhaninia, S Shirani, S Samavi
+                        </p>
+                        <p class="paper-journal">
+                            47th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC 2025).
+                        </p>
+                        <div class="paper-actions">
+                            <button class="action-btn copy-cite-btn" data-citation="Ladani, F. G., Karimi, N., Mirmahboub, B., Sobhaninia, Z., Shirani, S., & Samavi, S. (2025). Using fMRI Time Series and Functional Connectivity for Autism Classification. In 47th EMBC.">
+                                <i class="fa-regular fa-copy"></i> Copy Citation
+                            </button>
+                            <span class="action-btn inactive-btn"><i class="fa-solid fa-clock"></i> EMBC 2025 Presentation</span>
+                        </div>
+                    </div>
+
+                    <!-- Paper 2 -->
+                    <div class="paper-card glass-panel" data-type="submitted" data-keywords="autism graph neural network gnn computers biology medicine">
+                        <div class="paper-meta">
+                            <span class="pub-badge submitted">Submitted / In Review</span>
+                            <span class="paper-year">2026</span>
+                        </div>
+                        <h3 class="paper-title">
+                            Autism Spectrum Disorder Classification Using Graph Neural Network
+                        </h3>
+                        <p class="paper-authors">
+                            <strong>F. G. Ladani</strong>, N. Karimi, S. Samavi
+                        </p>
+                        <p class="paper-journal">
+                            2026.
+                        </p>
+                        <div class="paper-actions">
+                            <button class="action-btn copy-cite-btn" data-citation="Ladani, F. G., Karimi, N., & Samavi, S. (2026). Autism Spectrum Disorder Classification Using Graph Neural Network. Submitted to Computers in Biology and Medicine.">
+                                <i class="fa-regular fa-copy"></i> Copy Citation
+                            </button>
+                            <span class="status-badge"><i class="fa-solid fa-spinner fa-spin"></i> Under Review</span>
+                        </div>
+                    </div>
+
+                    <!-- Paper 3 -->
+                    <div class="paper-card glass-panel" data-type="published" data-keywords="fmri autism wavelet feature selection ridge classifier ai iot">
+                        <div class="paper-meta">
+                            <span class="pub-badge conference">AIIoT 2024</span>
+                            <span class="paper-year">2024</span>
+                        </div>
+                        <h3 class="paper-title">
+                            Wavelet Based fMRI Analysis for Autism Spectrum Disorder Detection using Feature Selection and Ridge Classifier
+                        </h3>
+                        <p class="paper-authors">
+                            <strong>F. G. Ladani</strong>, N. Karimi, P. Khadivi, S. Samavi
+                        </p>
+                        <p class="paper-journal">
+                            2024 IEEE World AI IoT Congress (AIIoT) 2024 May 29 (pp. 165-171). IEEE.
+                        </p>
+                        <div class="paper-actions">
+                            <button class="action-btn copy-cite-btn" data-citation="Ladani, F. G., Karimi, N., Khadivi, P., & Samavi, S. (2024). Wavelet Based fMRI Analysis for Autism Spectrum Disorder Detection using Feature Selection and Ridge Classifier. In 2024 IEEE World AI IoT Congress (AIIoT) (pp. 165-171). IEEE.">
+                                <i class="fa-regular fa-copy"></i> Copy Citation
+                            </button>
+                            <span class="action-btn inactive-btn"><i class="fa-solid fa-check"></i> Published (IEEE Xplore)</span>
+                        </div>
+                    </div>
+
+                    <!-- Paper 4 -->
+                    <div class="paper-card glass-panel" data-type="published" data-keywords="llm energy transformer grid access">
+                        <div class="paper-meta">
+                            <span class="pub-badge journal">IEEE Access</span>
+                            <span class="paper-year">2025</span>
+                        </div>
+                        <h3 class="paper-title">
+                            University Language Models for Energy Systems: Applications, Challenges, and Future Prospects
+                        </h3>
+                        <p class="paper-authors">
+                            H. Mirshekali, M. R. Shadi, <strong>F. G. Ladani</strong>, H. R. Shaker
+                        </p>
+                        <p class="paper-journal">
+                            IEEE Access, 2025.
+                        </p>
+                        <div class="paper-actions">
+                            <button class="action-btn copy-cite-btn" data-citation="Mirshekali, H., Shadi, M. R., Ladani, F. G., & Shaker, H. R. (2025). Language Models for Energy Systems: Applications, Challenges, and Future Prospects. IEEE Access.">
+                                <i class="fa-regular fa-copy"></i> Copy Citation
+                            </button>
+                            <span class="action-btn inactive-btn"><i class="fa-solid fa-check"></i> Published (IEEE Xplore)</span>
+                        </div>
+                    </div>
+
+                    <!-- Paper 5 -->
+                    <div class="paper-card glass-panel" data-type="published" data-keywords="grid smart grid transformer forecasting ppo reinforcment learning">
+                        <div class="paper-meta">
+                            <span class="pub-badge journal">IEEE Trans. Smart Grid</span>
+                            <span class="paper-year">2025</span>
+                        </div>
+                        <h3 class="paper-title">
+                            Consequence-Aware Prescriptive Maintenance Framework with Transformer Forecasting and PPO-Controlled Grid Reconfiguration
+                        </h3>
+                        <p class="paper-authors">
+                            H. Mirshekali, <strong>F. G. Ladani</strong>, H. R. Shaker
+                        </p>
+                        <p class="paper-journal">
+                            IEEE Transactions on Smart Grid, 2025.
+                        </p>
+                        <div class="paper-actions">
+                            <button class="action-btn copy-cite-btn" data-citation="Mirshekali, H., Ladani, F. G., & Shaker, H. R. (2025). Consequence-Aware Prescriptive Maintenance Framework with Transformer Forecasting and PPO-Controlled Grid Reconfiguration. IEEE Transactions on Smart Grid.">
+                                <i class="fa-regular fa-copy"></i> Copy Citation
+                            </button>
+                            <span class="action-btn inactive-btn"><i class="fa-solid fa-check"></i> Published (IEEE Smart Grid)</span>
+                        </div>
+                    </div>
+
+                    <!-- Paper 6 -->
+                    <div class="paper-card glass-panel" data-type="published" data-keywords="alzheimer transfer learning cnn mri iccke">
+                        <div class="paper-meta">
+                            <span class="pub-badge conference">ICCKE 2023</span>
+                            <span class="paper-year">2023</span>
+                        </div>
+                        <h3 class="paper-title">
+                            Exploring 3D Transfer Learning CNN Models for Alzheimer’s Disease Diagnosis from MRI Images
+                        </h3>
+                        <p class="paper-authors">
+                            <strong>F. G. Ladani</strong>, H. B. Kashani
+                        </p>
+                        <p class="paper-journal">
+                            2023 13th International Conference on Computer and Knowledge Engineering (ICCKE) 2023 Nov 1 (pp. 174-179). IEEE. (Presented by F. G. Ladani).
+                        </p>
+                        <div class="paper-actions">
+                            <button class="action-btn copy-cite-btn" data-citation="Ladani, F. G., & Kashani, H. B. (2023). Exploring 3D Transfer Learning CNN Models for Alzheimer’s Disease Diagnosis from MRI Images. In 2023 13th ICCKE (pp. 174-179). IEEE.">
+                                <i class="fa-regular fa-copy"></i> Copy Citation
+                            </button>
+                            <span class="action-btn inactive-btn"><i class="fa-solid fa-microphone"></i> Presented by F.G. Ladani</span>
+                        </div>
+                    </div>
+
+                    <!-- Paper 7 -->
+                    <div class="paper-card glass-panel" data-type="published" data-keywords="pneumonia regnet xor pso swarm optimization arxiv">
+                        <div class="paper-meta">
+                            <span class="pub-badge pre-print">arXiv</span>
+                            <span class="paper-year">2023</span>
+                        </div>
+                        <h3 class="paper-title">
+                            Optimized Deep Feature Selection for Pneumonia Detection: A Novel RegNet and XOR-Based PSO Approach
+                        </h3>
+                        <p class="paper-authors">
+                            <strong>F. G. Ladani</strong>, S. H. Semnani
+                        </p>
+                        <p class="paper-journal">
+                            arXiv preprint arXiv:2309.00147. 2023 Aug 31.
+                        </p>
+                        <div class="paper-actions">
+                            <button class="action-btn copy-cite-btn" data-citation="Ladani, F. G., & Semnani, S. H. (2023). Optimized Deep Feature Selection for Pneumonia Detection: A Novel RegNet and XOR-Based PSO Approach. arXiv preprint arXiv:2309.00147.">
+                                <i class="fa-regular fa-copy"></i> Copy Citation
+                            </button>
+                            <a href="https://arxiv.org/abs/2309.00147" class="action-btn link-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> arXiv Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IDE styled Projects Section -->
+        <section id="projects" class="section-padding bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Visual IDE Sandbox Workspace</span>
+                    <h2 class="section-title">IDE Project Workspace</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <!-- Interactive IDE Container -->
+                <div class="ide-container glass-panel">
+                    <!-- IDE Top Bar -->
+                    <div class="ide-topbar">
+                        <div class="ide-actions">
+                            <span class="ide-circle red"></span>
+                            <span class="ide-circle yellow"></span>
+                            <span class="ide-circle green"></span>
+                        </div>
+                        <div class="ide-tabs" id="ide-tabs-container">
+                            <div class="ide-tab active" data-tab="llm_app">
+                                <i class="fa-brands fa-python text-accent-blue"></i>
+                                <span>fullstack_llm.py</span>
+                                <span class="tab-close"><i class="fa-solid fa-xmark"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ide-workspace">
+                        <!-- IDE Sidebar File Tree -->
+                        <aside class="ide-sidebar">
+                            <div class="sidebar-header">
+                                <i class="fa-regular fa-folder-open"></i>
+                                <span>PORTFOLIO-WORKSPACE</span>
+                            </div>
+                            
+                            <div class="sidebar-tree">
+                                <!-- Folder 1: LLM -->
+                                <div class="tree-folder">
+                                    <div class="folder-title active"><i class="fa-solid fa-chevron-down"></i> <i class="fa-regular fa-folder"></i> <span>llm-agentic</span></div>
+                                    <div class="folder-contents open">
+                                        <div class="tree-file active" data-file="llm_app">
+                                            <i class="fa-brands fa-python text-accent-blue"></i>
+                                            <span>fullstack_llm.py</span>
+                                        </div>
+                                        <div class="tree-file" data-file="llm_platform">
+                                            <i class="fa-brands fa-python text-accent-blue"></i>
+                                            <span>sft_platform.py</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Folder 2: Medical AI -->
+                                <div class="tree-folder">
+                                    <div class="folder-title"><i class="fa-solid fa-chevron-down"></i> <i class="fa-regular fa-folder"></i> <span>medical-ai</span></div>
+                                    <div class="folder-contents open">
+                                        <div class="tree-file" data-file="asd_gnn">
+                                            <i class="fa-brands fa-python text-accent-blue"></i>
+                                            <span>asd_gnn_model.py</span>
+                                        </div>
+                                        <div class="tree-file" data-file="wavelet_asd">
+                                            <i class="fa-brands fa-python text-accent-blue"></i>
+                                            <span>wavelet_asd.py</span>
+                                        </div>
+                                        <div class="tree-file" data-file="scrna_seq">
+                                            <i class="fa-brands fa-python text-accent-blue"></i>
+                                            <span>scrna_seq_cluster.py</span>
+                                        </div>
+                                        <div class="tree-file" data-file="pneumonia_pso">
+                                            <i class="fa-brands fa-python text-accent-blue"></i>
+                                            <span>pneumonia_pso.py</span>
+                                        </div>
+                                        <div class="tree-file" data-file="capsule_drl">
+                                            <i class="fa-brands fa-python text-accent-blue"></i>
+                                            <span>capsule_drl_agent.py</span>
+                                        </div>
+                                        <div class="tree-file" data-file="alzheimer_3d">
+                                            <i class="fa-brands fa-python text-accent-blue"></i>
+                                            <span>alzheimer_3dcnn.py</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Folder 3: Energy Systems -->
+                                <div class="tree-folder">
+                                    <div class="folder-title"><i class="fa-solid fa-chevron-down"></i> <i class="fa-regular fa-folder"></i> <span>systems-optimization</span></div>
+                                    <div class="folder-contents open">
+                                        <div class="tree-file" data-file="energy_nlp">
+                                            <i class="fa-brands fa-python text-accent-blue"></i>
+                                            <span>energy_nlp.py</span>
+                                        </div>
+                                        <div class="tree-file" data-file="lca_pipeline">
+                                            <i class="fa-brands fa-python text-accent-blue"></i>
+                                            <span>modular_lca.py</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+
+                        <!-- IDE Code Editor -->
+                        <div class="ide-editor">
+                            <!-- Line numbering sidebar -->
+                            <div class="editor-gutter" id="gutter-lines">
+                                <!-- Line numbers rendered dynamically by JS -->
+                            </div>
+                            
+                            <!-- Main text area -->
+                            <div class="editor-content" id="editor-code-container">
+                                <!-- Structured interactive code variables loaded dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IDE Status Bar -->
+                    <div class="ide-statusbar">
+                        <div class="status-item"><i class="fa-solid fa-code-branch"></i> <span>main</span></div>
+                        <div class="status-item"><i class="fa-solid fa-circle-check"></i> <span>Ln 1, Col 1</span></div>
+                        <div class="status-item"><span class="terminal-accent">Python 3.11.9</span></div>
+                        <div class="status-item right" id="ide-run-btn"><i class="fa-solid fa-play"></i> <span>Run Application</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Expertise -->
+        <section id="skills" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Technical Competence</span>
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Core ML Frameworks Card -->
+                    <div class="skills-card glass-panel">
+                        <h3 class="skills-cat-title"><i class="fa-solid fa-microchip"></i> Deep Learning & Frameworks</h3>
+                        <ul class="skills-list-items">
+                            <li>
+                                <div class="skill-name-row">
+                                    <span>PyTorch & PyG (GNNs)</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 95%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-row">
+                                    <span>TensorFlow & Keras</span>
+                                    <span>Proficient</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-row">
+                                    <span>vLLM & LLM Adaptation</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-row">
+                                     <span>Advanced Deep Learning Architectures (CNN, Transformers, GAN)</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 92%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Languages Card -->
+                    <div class="skills-card glass-panel">
+                        <h3 class="skills-cat-title"><i class="fa-solid fa-code"></i> Languages & Dev Tools</h3>
+                        <ul class="skills-list-items">
+                            <li>
+                                <div class="skill-name-row">
+                                    <span>Python Programming</span>
+                                    <span>Expert</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 98%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-row">
+                                    <span>FastAPI / REST APIs</span>
+                                    <span>Proficient</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-row">
+                                    <span>Docker & Containers</span>
+                                    <span>Proficient</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 78%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-row">
+                                    <span>Git & CI/CD Systems</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 88%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-row">
+                                    <span>Linux & Shell Scripting</span>
+                                    <span>Advanced</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Teaching & Linguistics -->
+                    <div class="skills-card glass-panel">
+                        <h3 class="skills-cat-title"><i class="fa-solid fa-language"></i> Teaching & Languages</h3>
+                        
+                        <h4 class="sub-skills-title">Teaching Experience</h4>
+                        <div class="teaching-tags">
+                            <span>Data Mining TA</span>
+                            <span>Information Retrieval TA</span>
+                            <span>Swarm Optimization TA</span>
+                        </div>
+                        
+                        <h4 class="sub-skills-title" style="margin-top: 1.5rem;">Linguistic Skills</h4>
+                        <ul class="skills-list-items">
+                            <li>
+                                <div class="skill-name-row">
+                                    <span>Persian</span>
+                                    <span>Native</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 100%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-row">
+                                    <span>English</span>
+                                    <span>Professional Proficiency</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 95%"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-name-row">
+                                    <span>Danish</span>
+                                    <span>Beginner</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-bar-fill" style="width: 35%"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Contact & Networks</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="contact-wrapper">
+                    <div class="contact-info-panel glass-panel">
+                        <h3>Let's Collaborate</h3>
+                        <p>
+                            I am always interested in discussing new opportunities in machine learning, deep learning research, GenAI platforms, medical diagnostics engineering, or joint research papers. Drop me an email or connect through LinkedIn!
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <!-- Email -->
+                            <div class="contact-method-card">
+                                <div class="contact-method-icon"><i class="fa-regular fa-envelope"></i></div>
+                                <div class="contact-method-text">
+                                    <span class="method-label">Primary Email</span>
+                                    <span class="method-value">fladani@health.sdu.dk</span>
+                                </div>
+                                <button class="copy-contact-btn" data-copy="fladani@health.sdu.dk" title="Copy email address">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Location -->
+                            <div class="contact-method-card">
+                                <div class="contact-method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="contact-method-text">
+                                    <span class="method-label">Current Address</span>
+                                    <span class="method-value">Odense, Denmark</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-links-panel glass-panel">
+                        <h3>Online Presence</h3>
+                        <p>Access my academic profiles, publications indexes, and repositories:</p>
+                        
+                        <div class="profile-links-grid">
+                            <a href="https://github.com/fatemehghanadi" target="_blank" rel="noopener" class="profile-link-card" id="github-card">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub Repos</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/fatemeh-ghanadi" target="_blank" rel="noopener" class="profile-link-card" id="linkedin-card">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                                <span>LinkedIn Connection</span>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=MYXUk2oAAAAJ&hl=en" target="_blank" rel="noopener" class="profile-link-card" id="scholar-card">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>Google Scholar</span>
+                            </a>
+                            <a href="https://www.researchgate.net/profile/Fatemehsadat-Ghanadi-Ladani" target="_blank" rel="noopener" class="profile-link-card" id="researchgate-card">
+                                <i class="fa-brands fa-researchgate"></i>
+                                <span>ResearchGate</span>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <p>&copy; <span id="current-year">2026</span> Fatemehsadat Ghanadi Ladani. All rights reserved.</p>
+            <p class="built-with">Built with <i class="fa-solid fa-heart text-accent"></i> &amp; vanilla CSS, optimized for GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <!-- Core Script -->
+    <script src="script.js"></script>
+</body>
+</html>
