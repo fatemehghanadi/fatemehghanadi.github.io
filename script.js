@@ -106,7 +106,7 @@ function initTypewriter() {
     if (!typedTextSpan) return;
     
     const textArray = [
-        "AI & Robotics Researcher",
+        "AI Researcher",
         "Deep Learning Scientist",
         "Computer Scientist",
         "Medical Signal/Image Expert",
